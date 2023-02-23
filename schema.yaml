@@ -1,0 +1,108 @@
+### Author : BootLabsTech Pvt Ltd.
+### Description: Schema YAML file for Azure Public IP Creation.
+
+# This should match the release tag
+publishedVersion: '0.1.1'
+publishedVersionMetadata:
+  releaseNote: >-
+    Initial release.
+    # releaseTypes list is optional.
+    # an existing vulnerability
+    releaseTypes:
+    - Feature
+    - BugFix
+    - Upgrade
+    # If "recommended" is "true", users using older releases are encouraged
+    # to update as soon as possible. This is useful if, for example, this release
+    # fixes a critical issue.
+    recommended: true
+properties:
+  name:
+    inputType: textfield
+    type: string # UI should render a text box
+    description: The name of the public ip
+    title: "Name" # label in UI
+    required: true # mandatory value
+  location:
+    inputType: select
+    type: string
+    description: location of the public ip
+    title: "Location"
+    required: true
+    options:
+      - Central India
+      - South India
+  dns_prefix:
+    inputType: textfield
+    type: string
+    description: The zone of the public ip
+    title: "Dns Prefix"
+    required: true
+  environment:
+    inputType: select
+    type: string # UI should render a text box
+    description: The environment name  # tool tip text
+    title: "Environment" # label in UI
+    required: true # mandatory value
+    options:
+      - dev
+      - uat
+      - prod
+  vm_size:
+    inputType: select
+    type: string
+    description: location of the public ip
+    title: "Vm Size"
+    required: true
+    options:
+      - Standard_A2_v2
+      - Standard_A4_v2
+      - Standard_D2s_v3	
+      - Standard_D4s_v3	
+      - Standard_D8s_v3	
+      - Standard_D16s_v3
+      - Standard_D32s_v3
+      - Standard_DS2_v2
+      - Standard_DS3_v2
+      - Standard_DS4_v2	
+      - Standard_DS5_v2
+      - Standard_DS13_v2
+      - Standard_K8S_v1	
+      - Standard_K8S2_v1
+      - Standard_K8S3_v1		
+  os_disk_size_gb:
+    inputType: textfield
+    type: number
+    description: The zone of the public ip
+    title: "Size Gb"
+    required: true
+  primary_min_count:
+    inputType: textfield
+    type: number
+    description: The zone of the public ip
+    title: "Primary Min Count"
+    required: true
+  primary_max_count:
+    inputType: textfield
+    type: number
+    description: The zone of the public ip
+    title: "Primary Max Count"
+    required: true
+  secondary_min_count:
+    inputType: textfield
+    type: number
+    description: The zone of the public ip
+    title: "Secondary Min Count"
+    required: true
+  secondary_max_count:
+    inputType: textfield
+    type: number
+    description: The zone of the public ip
+    title: "Secondary Max Count"
+    required: true
+  subnet_id:
+    inputType: textfield
+    type: number
+    description: The zone of the public ip
+    title: "Secondary Max Count"
+    required: true
